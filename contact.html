@@ -22,18 +22,41 @@
                 </div>
             </div>
         </nav>
-        <form>
+        <form id="form" action="results.html" method="get" class="needs-validation" novalidate>
             <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
-                <input id="message" class="form-control">
+                <input form="form" id="message" name="message" class="form-control" required/>
+                <div class="invalid-feedback">
+                    Please enter a message
+                </div>
             </div>
 
             <div class="mb-3 form-check">
                 <label for="check" class="form-check-label">Important Message</label>
-                <input type="checkbox" class="form-check-input" id="check">
+                <input form="form" type="checkbox" class="form-check-input" id="check" name="check" />
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        <script>
+            (() => {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                const forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+            })()
+        </script>
     </body>
 </html>
