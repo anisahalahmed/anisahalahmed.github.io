@@ -1,25 +1,99 @@
-*{
-    /* padding: 10px 10px 10px 10px; */
-
+* {
     background-color: rgba(194, 8, 144, 0.15);
 }
-b{
-    
+
+b {
+
     color: rgb(118, 5, 69);
 }
+
 body {
     background-color: rgba(194, 8, 144, 0.15);
     color: rgb(8, 117, 212);
     font-family: 'Gill Sans', sans-serif;
 }
-h1, h2, h3 {
-    font-family:cursive;
+
+h1,
+h2,
+h3 {
+    font-family: cursive;
 }
-body, main, figure{
+
+body,
+main,
+figure,
+.center {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-figure{
+
+figure {
     row-gap: 10px;
+}
+
+nav,
+.endpage,
+h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.t3 thead:first-child {
+    background-color: rgb(165, 42, 108);
+}
+
+.t3 tbody> :nth-child(2n) :not([rowspan]) {
+    background-color: rgb(218, 17, 124);
+}
+
+.t3 tbody tr [rowspan] {
+    background-color: rgba(194, 8, 144, 0.15);
+}
+
+td {
+    text-align: center;
+    font-weight: bold;
+
+}
+
+tbody,
+th,
+td {
+    color: black
+}
+
+.button {
+    background-color: black;
+    color: rgb(45, 223, 45);
+}
+
+input,
+textarea,
+select {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(21, 6, 91);
+    text-align: center;
+    background-color: rgb(172, 6, 125);
+}
+
+a:link {
+    color: rgb(0, 19, 128);
+}
+
+
+a:visited {
+    color: rgb(0, 19, 128);
+}
+
+
+a:hover {
+    color: yellow;
+}
+
+
+a:active {
+    color: rgb(244, 7, 169);
 }
