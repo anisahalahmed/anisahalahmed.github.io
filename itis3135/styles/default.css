@@ -81,6 +81,7 @@ select {
 
 a:link {
     color: rgb(0, 19, 128);
+    
 }
 
 
@@ -96,4 +97,33 @@ a:hover {
 
 a:active {
     color: rgb(244, 7, 169);
+}
+.nounderline{
+    text-decoration: none;
+}
+
+.byo-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+#inputContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.byo-form > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.course {
+    display: flex;
+    justify-content: space-between;
+}
+
+.byo-hidden {
+    display: none;
 }
