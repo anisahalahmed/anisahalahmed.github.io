@@ -127,3 +127,57 @@ a:active {
 .byo-hidden {
     display: none;
 }
+
+/* this takes care of sizing issues in header and footer */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+    img {
+        width: 100%;
+    }
+    body {
+        padding: 0 20px;
+    }
+    table {
+
+    }
+ }
+
+ .heart-shape {
+    background: #8dcef1;
+    border-radius: 50%;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    position: relative;
+    margin: 5px;
+  }
+  
+  .heart-shape:before {
+    color: #e50b8b;
+    content: "❤";
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* got the heart shape from here: https://codeconvey.com/css-heart-shape/ */
+  .heart-shape span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 1em;
+    z-index: 1;
+    font-weight: bold;
+  }
+
+  .prompt {
+    width:97%
+  }

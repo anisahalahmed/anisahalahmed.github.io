@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Anisah, Contract">
+    <title>Anisah Alahmed || Attractive Alpaca || ITIS 3135 FizzBuzz</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header data-include="components/header.html"></header>
+    <main>
+        <h2>Fizz, Buzz, Bang!</h2>
+        <p><script>
+            let num = 110;
+            for (let i = 1; i <= num; i++){
+                if (i % 3 === 0 && i % 7 === 0 && i % 5 === 0){
+                    document.write("fizzbuzzBang" + " ");
+                }
+                else if (i % 7 === 0 && i % 5 === 0){
+                    document.write("buzzBang" + " ");
+                }
+                else if (i % 3 === 0 && i % 7 === 0){
+                    document.write("fizzBang" + " ");
+                }
+                else if (i % 3 === 0 && i % 5 === 0){
+                    document.write("fizzbuzz" + " ");
+                }
+                else if (i % 3 === 0){
+                    document.write("fizz" + " ");  
+                }
+                else if (i % 5 === 0){
+                    document.write("buzz" + " ");
+                }
+                else if (i % 7 === 0){
+                    document.write("Bang" + " ");
+                }
+                else {
+                    document.write(i + " ");
+                }
+    
+            }
+        </script></p>
+    </main>
+    <footer data-include="components/footer.html"></footer>
+    <script src="./scripts/include.js"></script>
+</body>
+</html>

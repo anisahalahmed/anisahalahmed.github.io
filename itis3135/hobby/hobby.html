@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerial</title>
+    <style>
+
+        html {
+            height: 100vh;
+        }
+
+        body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            align-items: center;
+        }
+
+        body {
+            background-image: url(./images/background.jpg);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+        }
+
+        html {
+            background-color: black;
+        }
+
+        section {
+            width: 300px;
+            padding: 20px;
+            margin-top: 18px;
+            margin-left: 250px;
+            max-height: 45vh;
+            overflow: auto;
+            display: none;
+        }
+
+        section.aboutMe {
+            display: block;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        figure>img {
+            max-width: 100%;
+        }
+
+        .secColor {
+            background-color: rgb(222, 213, 213);
+            padding: 20px;
+            box-shadow:
+                inset -6px -6px 10px rgb(92, 87, 84),
+                inset 6px 6px 10px rgb(92, 87, 84);
+            border-radius: 15px;
+        }
+
+        nav {
+            background-color: rgb(222, 213, 213);
+            padding-top: 6px;
+            padding-bottom: 6px;
+            margin-right: 85px;
+        }
+
+        div {
+            margin-left: 40px;
+        }
+
+        .buttons {
+            width: 100%;
+            padding: 20px;
+            margin: 8px;
+            margin-left: 15px;
+            margin-right: 15px;
+
+            font-size: 15px;
+        }
+
+        nav {
+            width: 750px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 87px;
+            box-shadow:
+                inset -6px -6px 10px rgb(92, 87, 84),
+                inset 6px 6px 10px rgb(92, 87, 84);
+            border-radius: 15px;
+        }
+
+        .one {
+            padding: 10px 20px;
+            border-radius: 15px;
+            background-color: rgb(242, 186, 242);
+            border: 0.2px solid rgba(226, 67, 226, 0.704);
+            outline: none;
+            box-shadow:
+                inset -4px -4px 8px rgba(178, 70, 178, 0.7),
+                inset 4px 4px 8px rgba(178, 70, 178, 0.7),
+                4px 4px 8px rgba(0, 0, 0, 0.1),
+                -4px -4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            width: 220px;
+            height: 60px;
+        }
+
+        .one:hover {
+            box-shadow:
+                inset -2px -2px 6px rgba(178, 70, 178, 0.7),
+                inset 2px 2px 6px rgba(178, 70, 178, 0.7),
+                2px 2px 6px rgba(0, 0, 0, 0.1),
+                -2px -2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .one:active {
+            box-shadow:
+                inset -6px -6px 10px rgba(178, 70, 178, 0.7),
+                inset 6px 6px 10px rgba(178, 70, 178, 0.7);
+        }
+
+        .two {
+            padding: 10px 20px;
+            border-radius: 15px;
+            background-color: rgb(202, 237, 245);
+            border: 0.2px solid rgba(94, 185, 206, 0.973);
+            outline: none;
+            box-shadow:
+                inset -4px -4px 8px rgba(37, 150, 175, 0.508),
+                inset 4px 4px 8px rgba(37, 150, 175, 0.508),
+                4px 4px 8px rgba(0, 0, 0, 0.1),
+                -4px -4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            width: 220px;
+            height: 60px;
+        }
+
+        .two:hover {
+            box-shadow:
+                inset -2px -2px 6px rgba(37, 150, 175, 0.508),
+                inset 2px 2px 6px rgba(37, 150, 175, 0.508),
+                2px 2px 6px rgba(0, 0, 0, 0.1),
+                -2px -2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .two:active {
+            box-shadow:
+                inset -6px -6px 10px rgba(37, 150, 175, 0.508),
+                inset 6px 6px 10px rgba(37, 150, 175, 0.508);
+        }
+
+        .three {
+            padding: 10px 20px;
+            border-radius: 15px;
+            background-color: rgb(246, 183, 219);
+            border: 0.2px solid rgb(194, 75, 142);
+            outline: none;
+            box-shadow:
+                inset -4px -4px 8px rgb(218, 75, 156),
+                inset 4px 4px 8px rgb(218, 75, 156),
+                4px 4px 8px rgba(0, 0, 0, 0.1),
+                -4px -4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            width: 220px;
+            height: 60px;
+        }
+
+        .three:hover {
+            box-shadow:
+                inset -2px -2px 6px rgb(218, 75, 156),
+                inset 2px 2px 6px rgb(218, 75, 156),
+                2px 2px 6px rgba(0, 0, 0, 0.1),
+                -2px -2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .three:active {
+            box-shadow:
+                inset -6px -6px 10px rgb(218, 75, 156),
+                inset 6px 6px 10px rgb(218, 75, 156);
+        }
+
+        .four {
+            padding: 10px 20px;
+            border-radius: 15px;
+            background-color: rgb(200, 234, 188);
+            border: 0.2px solid rgb(125, 194, 100);
+            outline: none;
+            box-shadow:
+                inset -4px -4px 8px rgb(134, 196, 112),
+                inset 4px 4px 8px rgb(134, 196, 112),
+                4px 4px 8px rgba(0, 0, 0, 0.1),
+                -4px -4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            width: 220px;
+            height: 60px;
+        }
+
+        .four:hover {
+            box-shadow:
+                inset -2px -2px 6px rgb(134, 196, 112),
+                inset 2px 2px 6px rgb(134, 196, 112),
+                2px 2px 6px rgba(0, 0, 0, 0.1),
+                -2px -2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .four:active {
+            box-shadow:
+                inset -6px -6px 10px rgb(134, 196, 112),
+                inset 6px 6px 10px rgb(134, 196, 112);
+        }
+
+        .five {
+            padding: 10px 20px;
+            border-radius: 15px;
+            background-color: rgb(225, 239, 155);
+            border: 0.2px solid rgb(175, 205, 25);
+            outline: none;
+            box-shadow:
+                inset -4px -4px 8px rgb(179, 205, 46),
+                inset 4px 4px 8px rgb(179, 205, 46),
+                4px 4px 8px rgba(0, 0, 0, 0.1),
+                -4px -4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            width: 220px;
+            height: 60px;
+        }
+
+        .five:hover {
+            box-shadow:
+                inset -2px -2px 6px rgb(179, 205, 46),
+                inset 2px 2px 6px rgb(179, 205, 46),
+                2px 2px 6px rgba(0, 0, 0, 0.1),
+                -2px -2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .five:active {
+            box-shadow:
+                inset -6px -6px 10px rgb(179, 205, 46),
+                inset 6px 6px 10px rgb(179, 205, 46);
+        }
+
+        .myAerial {
+            display: none;
+        }
+
+        .photos {
+            display: none;
+
+        }
+
+        video {
+            margin-left: 30px;
+        }
+        .vidfig{
+            text-align: center;
+
+        }
+
+        .updates {
+            display: none;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        header {
+            max-width: fit-content;
+        }
+
+        footer.secColor {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            column-gap: 10px;
+            padding: 10px;
+        }
+
+        footer.secColor > div {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="secColor">Aerial - My favorite thing to do</h1>
+    </header>
+    <main class="backgroundPic">
+        <nav>
+            <button onclick="toggleSection('aboutMe')" id="one" class="buttons one">Aerial</button>
+            <button onclick="toggleSection('myAerial')" class="buttons two">My Aerial Experience</button>
+            <button onclick="toggleSection('photos')" class="buttons three">Photo Gallery</button>
+            <button onclick="toggleSection('videos')" class="buttons four">Videos</button>
+            <button onclick="toggleSection('updates')" class="buttons five">Updates</button>
+        </nav>
+        <div>
+            <section id="aboutMe" class="secColor aboutMe hide">
+                <h2>Aerial</h2>
+                <h3>The Inception</h3>
+                <p>While pursuing a major in Computer Science, I also embraced the world of dance, seeking a major in
+                    this expressive art form. In my quest for a hobby that resonates with the essence of dance yet
+                    stands apart, I discovered the aerial arts.</p>
+                <h3>The Ascent to a Personal Goal</h3>
+                <p>Initially, the allure of the spotlight beckoned, and I contemplated a career as a performer. However,
+                    as I delved deeper into the creation of choreographies, my perspective shifted. I now cherish aerial
+                    arts as a treasured hobby, one that brings joy without the pressures that accompany a professional
+                    dance career.</p>
+                <h3>The Purpose of My Aerial Journey</h3>
+                <p>Aerial arts have become a creative outlet for me, serving as a medium for crafting stunning visuals.
+                    I harness this art form to capture photographs and create short videos that add a touch of the
+                    ethereal to my social media presence, sharing moments of suspended beauty with an appreciative
+                    audience.</p>
+                <figure>
+                    <img src="./images/aerial3.PNG" alt="aerial3">
+                    <figcaption>Aerial Silk</figcaption>
+                </figure>
+            </section>
+            <section id="myAerial" class="secColor myAerial hide">
+                <h2>My Aerial Experience</h2>
+                <h3>Aerial Silk</h3>
+                <p>My journey began with Aerial Silks, where I have reached an advanced level. This style, characterized
+                    by its fluidity and elegance, has become a space where I excel and express my aerial dance
+                    narratives.</p>
+                <h3>Aerial Lyra</h3>
+                <p>The Aerial Lyra, was the second style I explored. Its allure lies in the stunning visuals it creates,
+                    a blend of strength and poise suspended in air. Despite the inevitable bruises that are part of the
+                    learning curve, my journey with the Lyra has been rewarding, though I admit mastery in this
+                    apparatus eludes me still.</p>
+                <h3>Aerial Hammock</h3>
+                <p>Of all the styles, the Aerial Hammock holds a special place in my heart. It mirrors the aesthetic
+                    appeal of Aerial Silks but is gentler on the body. The Hammock offers a balance of challenge and
+                    accessibility, making it my preferred style and a constant in my aerial repertoire.</p>
+                <figure>
+                    <img src="./images/aerial2.jpg" alt="aerial2">
+                    <figcaption>Aerial Lyra</figcaption>
+                </figure>
+            </section>
+            <section id="photos" class="secColor photos">
+                <h2>Photo Gallery</h2>
+                <figure class="slide">
+                    <img src="./images/aerial1.jpg" alt="aerial1">
+                    <figcaption>Aerial Silk</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="./images/aerial2.jpg" alt="aerial2">
+                    <figcaption>Aerial Lyra</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="./images/aerial3.PNG" alt="aerial3">
+                    <figcaption>Aerial Silk</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="./images/aerial4.JPG" alt="aerial4">
+                    <figcaption>Aerial Silk</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="./images/aerial5.JPG" alt="aerial5">
+                    <figcaption>Aerial Silk</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="./images/aerial6.JPG" alt="aerial6">
+                    <figcaption>Aerial Silk</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="./images/aerial7.PNG" alt="aerial7">
+                    <figcaption>Aerial Silk</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="./images/aerial8.PNG" alt="aerial8">
+                    <figcaption>Aerial Silk</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="./images/aerial9.PNG" alt="aerial9">
+                    <figcaption>Aerial Silk</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="./images/aerial10.PNG" alt="aerial10">
+                    <figcaption>Aerial Silk</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="./images/aerial11.PNG" alt="aerial11">
+                    <figcaption>Aerial Silk</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="./images/aerial12.jpg" alt="aerial12">
+                    <figcaption>Aerial Silk</figcaption>
+                </figure>
+                <h3>Self-Photography Techniques</h3>
+                <p>I have developed a self-sufficient method for capturing my aerial artistry. Typically, I use a phone
+                    stand or even my water bottle to prop up my phone and frame the perfect shot.</p>
+                <h4>Utilizing a Timer</h4>
+                <p>Setting a timer is one of the simplest ways to photograph myself. However, the primary drawback is
+                    timing—the camera might not capture the peak moment of my performance.</p>
+                <h4>Extracting from Video</h4>
+                <p>Alternatively, recording a video and extracting stills is a viable strategy. This method ensures I
+                    don't miss the action, but it comes with a trade-off: the resolution of the images may not be as
+                    high as I'd like.</p>
+            </section>
+            <section id="videos" class="secColor videos hide">
+                <h2>Videos</h2>
+                <figure>
+                    <video width="150" height="240" controls>
+                        <source src="./videos/aerial1vid.mp4" type="video/mp4">
+                    </video>
+                    <figcaption class="vidfig">Highlights from My Private Aerial Session</figcaption>
+                </figure>
+                <figure>
+                    <video width="150" height="240" controls>
+                        <source src="./videos/aerial2vid.mp4" type="video/mp4">
+                    </video>
+                    <figcaption class="vidfig">Key Moments from a Regular Group Aerial Silk Class</figcaption>
+                </figure>
+                <h3>My Approach to Videography</h3>
+                <p>Capturing my aerial performances on video is a solo endeavor. I often rely on creative solutions like
+                    positioning my phone atop a stable surface, such as a stand or occasionally a water bottle, to get
+                    the perfect angle.</p>
+                <h4>Video for Still Images</h4>
+                <p>Another technique I employ is shooting a video to capture the flow of my routine, from which I can
+                    later select stills. While this method guarantees no missed moments, it does sometimes result in a
+                    compromise on image clarity.</p>
+                <figure>
+                    <img src="./images/aerial10.PNG" alt="aerial10">
+                    <figcaption>Aerial Silk</figcaption>
+                </figure>
+            </section>
+            <section id="updates" class="secColor updates">
+                <h2>Updates</h2>
+                <h3>Pause for Health</h3>
+                <p>My activities have been gentler of late, following an unexpected setback from a medical procedure
+                    that necessitated an extended hiatus.</p>
+                <h3>Recent Endeavors</h3>
+                <p>In the interim, I've dedicated myself to regular Pilates sessions and have been diligent with my
+                    physical therapy appointments, ensuring a strong foundation for recovery.</p>
+                <h3>Looking Ahead</h3>
+                <p>With optimism, I am charting a course for my return to aerial arts in the upcoming months,
+                    anticipating the moment I can soar once again.</p>
+                <figure>
+                    <img src="./images/aerial8.PNG" alt="aerial8">
+                    <figcaption>Aerial Silk</figcaption>
+                </figure>
+            </section>
+        </div>
+    </main>
+
+    <footer class="secColor">
+        <p class="endpage">Page Built by <a href="../anisahnisah.com/">Anisahnisah</a>© 2023</p>
+        <div>
+            <a class="nounderline" id="validation_link_html">
+                <img style="border:0;width:88px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" alt="Valid HTML!">
+            </a>
+            <a class="nounderline" id="validation_link_css">
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+            </a>
+            <script>
+                document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+                document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+            </script>
+        </div>
+    </footer>
+    
+    <script>
+        var slideIndex = 0;
+        slideshow();
+
+        function slideshow() {
+            var i;
+            var x = document.getElementsByClassName("slide");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) { slideIndex = 1 }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(slideshow, 2000);
+        }
+          selectedSection.style.display = "none";
+
+        function toggleSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function (section) {
+                if (section.id !== sectionId) {
+                    section.style.display = 'none';
+                }
+            });
+            var selectedSection = document.getElementById(sectionId);
+            
+            selectedSection.style.display = 'block';
+            
+        }
+
+    </script>
+    
+</body>
+
+</html>
