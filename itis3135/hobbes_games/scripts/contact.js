@@ -16,7 +16,7 @@ document.getElementById('submit').onclick = function (e) {
     const req = new XMLHttpRequest();
     
     // note, the client hasn't set this up yet, so pretending there is an API here
-    req.open('POST', '/api/contact');
+    req.open('POST', 'api/contact');
     req.setRequestHeader("Content-Type", "application/json");
     req.send(JSON.stringify({
         name,

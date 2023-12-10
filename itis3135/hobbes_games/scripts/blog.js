@@ -14,7 +14,7 @@ function request_data() {
             update_content();
         }
     };
-    req.open('GET', './scripts/blog.json');
+    req.open('GET', 'api/blogs');
     req.send();
 }
 

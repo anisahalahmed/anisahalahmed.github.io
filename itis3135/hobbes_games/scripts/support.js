@@ -9,7 +9,7 @@ function request_data() {
         }
     };
     // note, the client hasn't set this up yet, so using a fake file
-    req.open('GET', './scripts/amount');
+    req.open('GET', 'api/amount');
     req.send();
 }
 

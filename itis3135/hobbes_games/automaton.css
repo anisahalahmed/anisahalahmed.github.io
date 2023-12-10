@@ -46,7 +46,7 @@ header, footer{
     flex: 1;
     max-height: 76vh;
     overflow: auto;
-    padding: 20px;
+    /* padding: 20px; */
 }
 .leftColumn, .rightColumn{
     flex: 0;
@@ -167,6 +167,8 @@ a:hover {
     display: flex;
     flex-direction: row;
     column-gap: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 #progress {
@@ -192,6 +194,6 @@ a:hover {
 }
 
 #banner {
-    width: 30%;
+    width: 50%;
     border: 0.2em solid rgb(0, 179, 255);
 }
