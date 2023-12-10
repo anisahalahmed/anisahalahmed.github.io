@@ -8,7 +8,6 @@ function request_data() {
             bar.style = "width: calc(" + amount + " / 1000 * 100%); transition: width 2s;"
         }
     };
-    // note, the client hasn't set this up yet, so using a fake file
     req.open('GET', 'api/amount');
     req.send();
 }
