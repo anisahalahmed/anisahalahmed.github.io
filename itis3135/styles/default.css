@@ -81,7 +81,7 @@ select {
 
 a:link {
     color: rgb(0, 19, 128);
-    
+
 }
 
 
@@ -98,7 +98,8 @@ a:hover {
 a:active {
     color: rgb(244, 7, 169);
 }
-.nounderline{
+
+.nounderline {
     text-decoration: none;
 }
 
@@ -114,7 +115,7 @@ a:active {
     row-gap: 5px;
 }
 
-.byo-form > div {
+.byo-form>div {
     display: flex;
     justify-content: space-between;
 }
@@ -138,15 +139,15 @@ nav {
     img {
         width: 100%;
     }
+
     body {
         padding: 0 20px;
     }
-    table {
 
-    }
- }
+    table {}
+}
 
- .heart-shape {
+.heart-shape {
     background: #8dcef1;
     border-radius: 50%;
     display: inline-block;
@@ -155,9 +156,9 @@ nav {
     text-align: center;
     position: relative;
     margin: 5px;
-  }
-  
-  .heart-shape:before {
+}
+
+.heart-shape:before {
     color: #e50b8b;
     content: "❤";
     font-size: 3em;
@@ -165,9 +166,10 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  /* got the heart shape from here: https://codeconvey.com/css-heart-shape/ */
-  .heart-shape span {
+}
+
+/* got the heart shape from here: https://codeconvey.com/css-heart-shape/ */
+.heart-shape span {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -176,8 +178,64 @@ nav {
     font-size: 1em;
     z-index: 1;
     font-weight: bold;
-  }
+}
 
-  .prompt {
-    width:97%
-  }
+.prompt {
+    width: 97%
+}
+
+/* slideshow */
+
+
+.slideshow {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.thumbnails {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    cursor: pointer;
+    height: 50px;
+    opacity: 0.6;
+    margin: 5px;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+}

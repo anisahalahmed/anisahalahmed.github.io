@@ -134,3 +134,58 @@ a:hover {
     height: auto;
 }
 
+.hidden {
+    display: none;
+}
+
+#blog {
+    max-width: 50%;
+    margin: auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.paging {
+    color: rgb(0, 179, 255);
+    text-decoration: underline;
+}
+
+.navdisabled {
+    color: gray;
+}
+
+.navdisabled:hover {
+    color: gray;
+    text-shadow: none;
+}
+
+.bar {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+#progress {
+    flex: 1;
+    background: #333333;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#current {
+    background: #00AA00;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.dollar {
+    flex: 0;
+}
+
+#acknowledge {
+    width: 50%;
+    margin: auto;
+}
