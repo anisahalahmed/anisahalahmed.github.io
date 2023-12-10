@@ -190,3 +190,8 @@ a:hover {
     width: 50%;
     margin: auto;
 }
+
+#banner {
+    width: 30%;
+    border: 0.2em solid rgb(0, 179, 255);
+}
