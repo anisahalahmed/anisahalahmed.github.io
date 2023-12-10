@@ -1,4 +1,6 @@
 var slideIndex = 0;
+// https://www.w3schools.com/jsref/met_win_cleartimeout.asp
+var timeout;
 slideshow();
 
 function slideshow() {
@@ -10,6 +12,15 @@ function slideshow() {
   slideIndex++;
   if (slideIndex > x.length) {slideIndex = 1}
   x[slideIndex-1].style.display = "block";
-  setTimeout(slideshow, 2000); 
+  clearTimeout(timeout);
+  timeout = setTimeout(slideshow, 5000); 
 }
 // got this from https://www.w3schools.com/w3css/w3css_slideshow.asp
+
+const nextButton = document.getElementById('next');
+
+function next() {
+  slideshow();
+}
+
+nextButton.onclick = next;
